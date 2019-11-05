@@ -28,6 +28,7 @@ public class SelectionSort {
 			//remove from input 
 			input.removeIndex(index);
 		}
+		System.out.println(sortedList);
 
 		
 	
@@ -45,7 +46,7 @@ public class SelectionSort {
 		}
 		System.out.println(index);
 		return index;
+	
 	}
-	//return sortedList;?
 
 }
