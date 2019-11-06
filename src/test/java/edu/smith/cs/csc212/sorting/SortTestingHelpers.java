@@ -20,9 +20,11 @@ public class SortTestingHelpers {
 	 * @return true if it is sorted, false if not.
 	 */
 	public static boolean checkSorted(ListADT<Integer> items, int originalSize) {
+		
 		Assert.assertEquals(originalSize, items.size());
 		for (int i=0; i<items.size()-1; i++) {
 			if (items.getIndex(i) > items.getIndex(i+1)) {
+				System.out.println(items);
 				System.err.println("items out of order: "+items.getIndex(i)+", "+items.getIndex(i+1) + " at index="+i);
 				return false;
 			}
