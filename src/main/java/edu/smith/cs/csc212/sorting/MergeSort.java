@@ -32,11 +32,13 @@ public class MergeSort {
 			int middle = input.size()/2;
 			ListADT<Integer> left = input.slice(0, middle);
 			ListADT<Integer> right = input.slice(middle, input.size());
-			//call mergeSort on 1st half
 			
+			//call mergeSort on 1st half
 			recursiveSort(left);
+			
 			//call mergeSort on 2nd half
 			recursiveSort(right);
+			
 			//merge two halves together
 			ListADT<Integer> sortedList = combine(left, right);
 			
@@ -49,6 +51,13 @@ public class MergeSort {
 	}
 	
 	public static void iterativeSort(ListADT<Integer> input) {
+		ListADT<Integer> queue = new JavaList<Integer>();
+		//need to copy DLL into 
+		
+		for (int i = 0; i < input.size(); i++) {
+			queue.addBack(i);
+			
+		}
 		
 	}
 	
