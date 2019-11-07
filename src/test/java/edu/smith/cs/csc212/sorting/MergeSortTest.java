@@ -1,7 +1,14 @@
+
 package edu.smith.cs.csc212.sorting;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import edu.smith.cs.csc212.sorting.InsertionSort;
 import me.jjfoley.adt.ListADT;
 import me.jjfoley.adt.impl.JavaList;
 
@@ -9,19 +16,19 @@ import me.jjfoley.adt.impl.JavaList;
 
 public class MergeSortTest {
 	@Test
-	public void testMergeSort() {
+	public void testRecursiveMergeSort() {
 		// See if the data can be reversed:
 		ListADT<Integer> sortMe = new JavaList<>();
 		for (int y : SortTestingHelpers.data) {
 			sortMe.addBack(y);
 		}
-		MergeSort.sort(sortMe);
+		MergeSort.recursiveSort(sortMe);
 		Assert.assertTrue(SortTestingHelpers.checkSorted(sortMe, SortTestingHelpers.data.length));
 		
 		Random rand = new Random(13);
 		// For good measure, let's shuffle it and sort it again to see if that works, too.
 		sortMe.shuffle(rand);
-		MergeSort.sort(sortMe);
+		MergeSort.recursiveSort(sortMe);
 		Assert.assertTrue(SortTestingHelpers.checkSorted(sortMe, SortTestingHelpers.data.length));
 		
 		// check it is the original size
@@ -34,7 +41,7 @@ public class MergeSortTest {
 		List<Integer> data = Arrays.asList(35, 88, 11, 47, 14, 24, 41, 62, 27);
 		ListADT<Integer> sortMe = new JavaList<>(data);
 		
-		MergeSort.sort(sortMe);
+		MergeSort.recursiveSort(sortMe);
 		Assert.assertTrue(SortTestingHelpers.checkSorted(sortMe, data.size()));
 		
 		// check it is the original size
