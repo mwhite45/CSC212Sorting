@@ -20,7 +20,6 @@ public class InsertionSortTest {
 		for (int y : SortTestingHelpers.data) {
 			sortMe.addBack(y);
 		}
-		System.out.println(sortMe);
 		InsertionSort.sort(sortMe);
 		Assert.assertTrue(SortTestingHelpers.checkSorted(sortMe, SortTestingHelpers.data.length));
 		

@@ -17,10 +17,9 @@ public class SelectionSort {
 	 */
 	
 	
-	public static void sort(ListADT<Integer> input) { //check if input passed in correctly
+	public static void sort(ListADT<Integer> input) { 
 		//int N = input.size();
-		//ListADT<Integer> sortedList = new JavaList<Integer>(); //ask jj about whether ListADT or this is fine
-		System.out.println("izz " + input);
+		//ListADT<Integer> sortedList = new JavaList<Integer>(); 
 			for (int i = 0; i < input.size()-1; i++) {
 				int min = input.getIndex(i);
 				int minIndex = i;
@@ -34,7 +33,6 @@ public class SelectionSort {
 				
 				input.swap(i, minIndex);
 			}
-			System.out.println("ii" + input);
 		
 	
 					

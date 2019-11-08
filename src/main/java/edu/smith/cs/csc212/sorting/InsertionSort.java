@@ -6,7 +6,6 @@ import me.jjfoley.adt.ListADT;
 import me.jjfoley.adt.impl.JavaList;
 
 public class InsertionSort {
-	//until unsorted is empty, take first element off it, find point it should go in sorted (point where all previous are smaller after are larger) and insert 
 
 	public static void sort(ListADT<Integer> input) {
 		
